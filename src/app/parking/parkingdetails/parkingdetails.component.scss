@@ -1,0 +1,28 @@
+@import '../../scss/settings/s.colors';
+@import '../../scss/settings/s.dimensions';
+
+
+.parking {
+    background: $parking-default-color;
+    color: white;
+    width: $parking-square-size;
+    height: $parking-square-size;
+
+    text-align: center;
+
+    margin: 10px;
+
+    .parking__icon {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 100px;
+    }
+}
+
+.is--almost-full {
+    background-color: orange;
+}
+
+.is--full {
+    background-color: red;
+}

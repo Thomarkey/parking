@@ -1,0 +1,23 @@
+<div class="c-filters">
+    <fieldset>
+        <legend>Filters</legend>
+
+        <div class="c-filters__form">
+            <div class="c-form__group">
+                <label for="filter">Filter op naam </label>
+                <input type="text" id="filter" placeholder="sint-.." [(ngModel)]="filter">
+            </div>
+        </div>
+        <div>is open  <input type="checkbox" id="isOpen" [(ngModel)]="isOpenFilter"></div>
+    </fieldset>
+</div>
+
+
+<div class="c-parking-list">
+    <div class="c-parking-list__item" *ngFor="let parking of parkings | parkingFilter:filter | parkingOpenFilter:isOpenFilter">
+        <app-parkingdetails style="display:block;" [parking]="parking"></app-parkingdetails>
+    </div>
+
+</div>
+
+<app-parking-form [parkings]="parkings"></app-parking-form>

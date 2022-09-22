@@ -1,0 +1,12 @@
+<div class="parking" [ngClass]="{'is--almost-full':isAlmostFull(), 'is--full':isFull()}">
+    <div class="parking__icon">p</div>
+    <div class="parking__name">{{parking.name}}</div>
+    <div class="parking__info">
+        <span class="parking-cap">{{parking.availablecapacity}}</span>/
+        <span class="parking-cap">{{parking.totalcapacity}}</span>
+        <div *ngIf='isOpen()'>IS OPEN</div>
+    </div>
+    <div>
+        <button type="button" routerLink="/detail/{{parking.name}}">To detail</button>
+    </div>
+</div>

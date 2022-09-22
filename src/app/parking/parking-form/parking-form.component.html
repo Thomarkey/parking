@@ -1,0 +1,8 @@
+<form [formGroup]="parkingForm" (ngSubmit)="onFormSubmit()">
+    Id: <input type="text" formControlName="id" placeholder="Enter Id">
+    Name: <input type="text" formControlName="name" placeholder="Enter Name">
+    availablecapacity: <input type="number" formControlName="availablecapacity" placeholder="Enter availablecapacity">
+    totalcapacity: <input type="number" formControlName="totalcapacity" placeholder="Enter totalcapacity">
+    
+    <button type="submit">Submit</button>
+</form>
